@@ -1,0 +1,2 @@
+Model,Analysis_Type,Accuracy,Precision,Recall,F1_score
+PyTorch Deep Neural Network,Deep Learning classifier,0.8181818181818182,0.75,0.8181818181818182,0.7792207792207791

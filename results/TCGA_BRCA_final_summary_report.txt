@@ -1,0 +1,86 @@
+================================================================================
+TCGA-BRCA TRANSCRIPTOMIC ANALYSIS PIPELINE - FINAL REPORT
+================================================================================
+
+Analysis Date: 2026-05-29 10:23:39
+
+1. DATA SUMMARY
+--------------------------------------------------------------------------------
+  Original samples: 1226
+  Original genes: 60660
+  Analyzed samples: 1095
+  Analyzed genes: 60660
+  Top genes selected for ML: 500
+  PAM50 subtype distribution:
+    - LumB: 25
+    - LumA: 18
+    - Basal: 15
+    - Her2: 11
+    - Unknown: 4
+    - Normal: 1
+
+2. CORRELATION ANALYSIS
+--------------------------------------------------------------------------------
+  Strongest correlated gene pair: ENSG00000187288.12 - ENSG00000184811.4
+  Correlation: 0.991
+
+3. PRINCIPAL COMPONENT ANALYSIS
+--------------------------------------------------------------------------------
+  PC1 explains: 17.7%
+  PC2 explains: 14.0%
+  PC1 + PC2 explains: 31.7%
+  PCs required for 90% variance: 41
+
+4. UNSUPERVISED CLUSTERING
+--------------------------------------------------------------------------------
+  Optimal cluster number: 3
+
+5. MACHINE LEARNING CLASSIFICATION
+--------------------------------------------------------------------------------
+  Best classical ML model: Random Forest
+  Accuracy: 0.905
+  F1-score: 0.883
+
+6. SURVIVAL ANALYSIS
+--------------------------------------------------------------------------------
+  Most survival-associated gene: ENSG00000124935.4
+  Log-rank p-value: 0.1387
+  Cox HR: 1.060
+  Genes with log-rank p < 0.05: 0/5
+
+7. DEEP LEARNING / AI MODELS
+--------------------------------------------------------------------------------
+  PyTorch DNN classifier:
+    Accuracy: 0.818
+    F1-score: 0.779
+  Autoencoder latent-space classification:
+    - Logistic Regression (Latent): Accuracy=0.636, F1=0.618
+    - Random Forest (Latent): Accuracy=0.818, F1=0.780
+
+8. OUTPUT DIRECTORIES
+--------------------------------------------------------------------------------
+  Tables directory: /mnt/c/TCGA_cancer/results/tables
+  Figures directory: /mnt/c/TCGA_cancer/results/figures
+  Models directory: /mnt/c/TCGA_cancer/results/models
+
+9. KEY INTERPRETATION
+--------------------------------------------------------------------------------
+  • Correlation analysis identifies transcriptomic co-expression patterns, but does not imply causation.
+  • PCA and clustering provide unsupervised views of subtype-associated transcriptomic structure.
+  • Classical ML models can classify PAM50 subtypes using expression signatures.
+  • Autoencoder latent features show whether compressed representations preserve subtype information.
+  • Deep learning results should be interpreted cautiously because the labeled sample size is small.
+  • Survival analysis was exploratory and no strong survival-associated marker was detected in the tested genes.
+
+10. FUTURE DIRECTIONS
+--------------------------------------------------------------------------------
+  1. Map Ensembl IDs to gene symbols for biological interpretation.
+  2. Use an external validation cohort.
+  3. Add pathway enrichment analysis.
+  4. Add SHAP-based explainability for ML models.
+  5. Extend the project to multi-omics integration.
+  6. Explore graph neural networks or transformer-based omics models.
+
+================================================================================
+END OF REPORT
+================================================================================

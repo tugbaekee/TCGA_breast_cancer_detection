@@ -1,0 +1,2 @@
+n_samples,n_genes,n_classes,n_train,n_validation,n_test,class_names
+73,2000,5,51,11,11,"Basal, Her2, LumA, LumB, Unknown"
