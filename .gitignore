@@ -1,2 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data files
+*.tsv
+*.csv.gz
+*.zip
+*.tar.gz
+
+# Model files
 *.pt
 *.pth
+*.pkl
+*.joblib
+
+# OS
+.DS_Store
+Thumbs.db
